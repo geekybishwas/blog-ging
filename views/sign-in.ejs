@@ -39,6 +39,14 @@
     </div>
   </nav>
 
+  <% if(locals.error){ %>
+  <div class="container mt-4">
+    <div class="alert alert-danger" role="alert">
+      <%=locals.error %>
+    </div>
+  </div>
+  <% } %>
+
   <div class="container">
     <form method="POST" action="/user/signin">
       <div class="mb-3">
@@ -52,5 +60,6 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
+
 
   <% include('./partials/footer') %>
