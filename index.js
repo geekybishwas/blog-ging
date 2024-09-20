@@ -11,7 +11,7 @@ const {
 } = require("./middlewares/authentication");
 const app = express();
 
-const PORT = 8004;
+const PORT = 8008;
 
 // Connection mongodb
 connectMongoDb("mongodb://127.0.0.1:27017/blogging")

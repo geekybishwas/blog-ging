@@ -4,7 +4,7 @@ function checkForAuthenticationCokkie(cookieName) {
     if (!tokenCookieValue) return next();
 
     try {
-      const userPayload = validateToken(tokenCookieValue);
+      const userPayload = validate_token(tokenCookieValue);
       req.user = userPayload;
     } catch (error) {}
 

@@ -13,6 +13,7 @@ router.get("/signup", (req, res) => {
 
 router.post("/signin", async (req, res) => {
   const { email, password } = req.body;
+
   try {
     // This function is used to matched the password of user and generate token
     const token = await User.matchPasswordAndGenerateToken(email, password);
