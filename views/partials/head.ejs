@@ -21,7 +21,7 @@
         </li>
         <% if(locals.user){%>
         <li class="nav-item">
-          <a class="nav-link" href="/blog/add-new">Add Blog</a>
+          <a class="nav-link" href="#">Add Blog</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
@@ -46,18 +46,3 @@
       </ul>
     </div>
   </nav>
-
-  <% blogs.forEach(blog => {  %>
-  <div class="card" style="width: 18rem;">
-    <img src="<%= blog.coverImageURL %>" class="card-img-top">
-    <div class="card-body">
-      <h5 class="card-title"><%= blog.title %></h5>
-      <a href="#" class="btn btn-primary"><%= blog.body%></a>
-      <a href="#" class="btn btn-primary">View</a>
-
-    </div>
-  </div>
-  <% })%>
-
-  <!-- Inlcude footer -->
-  <% include('./partials/footer') %>

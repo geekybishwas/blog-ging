@@ -17,6 +17,7 @@ router.post("/signin", async (req, res) => {
   try {
     // This function is used to matched the password of user and generate token
     const token = await User.matchPasswordAndGenerateToken(email, password);
+
     return res.cookie("token", token).redirect("/");
   } catch (error) {
     return res.render("sign-in", {
@@ -35,6 +36,10 @@ router.post("/signup", async (req, res) => {
   });
 
   return res.redirect("/");
+});
+
+router.get("/logout", (req, res) => {
+  res.clearCookie("token").redirect("/");
 });
 
 module.exports = router;
