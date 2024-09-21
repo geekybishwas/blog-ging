@@ -5,6 +5,7 @@ const secret = "$geeks#for#real#07$";
 async function create_token_for_user(user) {
   const payload = {
     _id: user._id,
+    fullName: user.fullName,
     email: user.email,
     profile_image_url: user.profile_image_url,
     role: user.role,

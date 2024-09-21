@@ -16,7 +16,7 @@ const Blog = require("./models/blog");
 
 const app = express();
 
-const PORT = 8002;
+const PORT = 8003;
 
 // Connection mongodb
 connectMongoDb("mongodb://127.0.0.1:27017/blogging")
